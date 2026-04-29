@@ -1,0 +1,265 @@
+.add-book-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 200px);
+  padding: 2rem;
+}
+
+.add-book-card {
+  background: white;
+  border-radius: 24px;
+  padding: 2rem;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.add-book-card h2 {
+  color: #5a3e2b;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.add-book-card h3 {
+  color: #5a3e2b;
+  font-size: 1rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.add-book-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.add-book-card input,
+.add-book-card select {
+  padding: 0.75rem;
+  border: 2px solid #ffe6d5;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.add-book-card textarea {
+  padding: 0.75rem;
+  border: 2px solid #ffe6d5;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+  resize: vertical;
+  max-height: 200px;
+  min-height: 100px;
+}
+
+.add-book-card input:focus,
+.add-book-card textarea:focus,
+.add-book-card select:focus {
+  outline: none;
+  border-color: #f5a623;
+  box-shadow: 0 0 0 3px rgba(245, 166, 35, 0.1);
+}
+
+.add-book-card button {
+  background: linear-gradient(135deg, #f5a623, #f7931e);
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.add-book-card button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(245, 166, 35, 0.3);
+}
+
+.add-book-card button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.books-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.books-container h1 {
+  color: #5a3e2b;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.book-card {
+  background: white;
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.book-card h3 {
+  color: #5a3e2b;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  word-wrap: break-word;
+}
+
+.book-card .author {
+  color: #f5a623;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.book-card .genre {
+  color: #8b6b4a;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.book-card .description {
+  color: #5a3e2b;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  word-wrap: break-word;
+  max-height: 100px;
+  overflow-y: auto;
+}
+
+.book-tags {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background: #fff5e8;
+  color: #f5a623;
+  font-size: 0.7rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 12px;
+}
+
+.rating-section {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.stars {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.star-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #ddd;
+  font-size: 1.2rem;
+  transition: color 0.2s;
+}
+
+.star-btn.active {
+  color: #f5a623;
+}
+
+.star-btn:hover {
+  color: #f5a623;
+}
+
+.avg-rating {
+  font-size: 0.8rem;
+  color: #8b6b4a;
+}
+
+.book-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.buy-link, .delete-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  text-align: center;
+  flex: 1;
+}
+
+.buy-link {
+  background: #f5f5f5;
+  color: #5a3e2b;
+}
+
+.buy-link:hover {
+  background: #f5a623;
+  color: white;
+}
+
+.delete-btn {
+  background: #fee;
+  color: #d9534f;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.delete-btn:hover {
+  background: #fdd;
+}
+
+.loading-spinner {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.2rem;
+  color: #8b6b4a;
+}
+
+@media (max-width: 768px) {
+  .add-book-card {
+    padding: 1.5rem;
+  }
+
+  .books-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .book-card .description {
+    max-height: 80px;
+  }
+}
